@@ -8,7 +8,9 @@ app.get('/questions/:id/:title', (req, res) => {
 
 
 app.get('/users/:id/:username', (req, res) => {
-    res.send('This route will handle all the users of stackoverflow.')
+    let user = req.params.username;
+
+    res.send('This route will handle ' + user + ' profile')
 })
 
 app.listen(3000, ()=> {
